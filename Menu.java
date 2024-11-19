@@ -16,16 +16,22 @@ public class Menu {
 
     // Start method to control the flow of the menu
     public void start() {
-        while (true) {
-            if (currentUser == null) {
-                loginMenu(); // Show login menu if no user is logged in
-            } else {
-                mainMenu(); // Show main menu if a user is logged in
+        try {
+            while (true) {
+                if (currentUser == null) {
+                    loginMenu(); // Show login menu if no user is logged in
+                } else {
+                    mainMenu(); // Show main menu if a user is logged in
+                }
             }
+        } catch (Exception e) {
+            System.out.println("An unexpected error : " + e.getMessage());
+            System.out.println("The application will now exit.");
+            System.exit(1);
         }
     }
 
-    // Display login menu optio
+    // Display login menu options
     private void loginMenu() {
         System.out.println("1. Login");
         System.out.println("2. Exit");

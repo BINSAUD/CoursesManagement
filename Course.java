@@ -46,11 +46,10 @@ public class Course {
     // Overriding toString method to provide a string representation of the Course object
     @Override
     public String toString() {
-        return "Course{" +
-                "title='" + title + '\'' +
-                ", instructor='" + instructor + '\'' +
-                ", area='" + area + '\'' +
-                ", creditHours=" + creditHours +
-                '}'; // Format output with all course details
+        return '\n' +"Course" +
+                "title=" + title + '\n' +
+                "instructor= " + instructor + '\n' +
+                "area= " + area + '\n' +
+                "creditHours=" + creditHours + "\n\n\n"; // Format output with all course details
     }
 }
